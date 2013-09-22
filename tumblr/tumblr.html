@@ -16,7 +16,6 @@
 
 		body,html {
 			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      -webkit-font-smoothing: antialiased;
 		}
 
     .container {
@@ -61,8 +60,30 @@
     #hand {
       margin-top: 20px;
       height: 48px;
-      padding-left: 10px;
       float: left;
+      -webkit-transition-duration: 0.7s;
+      -moz-transition-duration: 0.7s;
+      -o-transition-duration: 0.7s;
+      transition-duration: 0.7s;
+      -webkit-transition-property: -webkit-transform;
+      -moz-transition-property: -moz-transform;
+      -o-transition-property: -o-transform;
+      transition-property: transform;
+      overflow:hidden;
+    }
+
+    #hand:hover {  
+      -webkit-transform:rotate(90deg);
+      -moz-transform:rotate(90deg);
+      -o-transform:rotate(90deg);
+    }
+
+    #hand:active {  
+      -webkit-transform:rotate(90deg);
+      -moz-transform:rotate(90deg);
+      -o-transform:rotate(90deg);
+      padding-left: 10px;
+      padding-right: -10px;
     }
 
     header {
@@ -100,6 +121,18 @@
       float: left;
     }
 
+    .searchfield {
+      padding: 10px 10px 10px 10px;
+      font-size: 18px;
+      font-weight: lighter;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #C0C0C0;
+      border: 1px solid #C0C0C0;
+      background-color: #ffffff;
+      width: 190px;
+    }
+
     .submit {
       padding: 12px;      
       background: #ee0000;
@@ -110,6 +143,50 @@
 
     .submit:hover {
       background: #ff0000;
+    }
+
+    .description {
+      font-size: 36px;
+      font-weight: lighter;
+      margin-top: 70px;
+      width: 240px;
+    }
+
+    .photo {
+      margin-top: 70px;
+      width: 540px;
+    }   
+
+    .detail {
+      border: 30px solid #f8f8f8;
+      max-width: 480px;
+      float: left;
+    }
+
+    .caption {
+      float: left;
+      margin-top: 30px;
+      width: 540px;
+    }
+
+    .caption p {
+      font-size: 18px;
+      color: #101010;
+      font-weight: lighter;
+    }
+
+    .caption a {
+      color: #ee0000;
+    }
+
+    .caption a:hover {
+      color: #ff0000;
+
+      }
+
+    .meta {
+      float: right;
+      width: 60px;
     }
 
 		img, video, object, embed {
@@ -152,10 +229,10 @@
   <div class="container" class="clearfix">
 
     <div class="sec-col">
-      <h2>Your daily dose of design inspiration.</h2>
+      <h2 class="description">Your daily dose of design inspiration.</h2>
       <form id="search" action="/search" method="get">
-        <input type="text" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
-        <input type="submit" value="{lang:Search}">
+
+        <input type="text" class="searchfield" placeholder="{lang:Search}..." name="q" value="{SearchQuery}">
       </form>
 
     </div>
@@ -172,10 +249,6 @@
 
   		{block:Posts}
   		<article class="post {TagsAsClasses}">
-  			{block:Date}
-  			{block:NewDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:NewDayDate}
-  			{block:SameDayDate}<p>{DayOfWeek}, {Month} {DayOfMonth}, {Year}</p>{/block:SameDayDate}
-  			{/block:Date}
   			{block:Text}
   			<div class="text">
   				{block:Title}<h3>{Title}</h3>{/block:Title}
@@ -209,8 +282,19 @@
   			{/block:Audio}
   			{block:Photo}
   			<div class="photo">
-  					{LinkOpenTag}<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>{LinkCloseTag}
+  					{LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
+
+            {block:Date}
+              <div class="meta">
+                {block:NewDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:NewDayDate}
+                {block:SameDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:SameDayDate}
+              </div>
+            {/block:Date}
+            
   					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+
+
+
   			</div>
   			{/block:Photo}
   			{block:Photoset}
@@ -251,7 +335,9 @@
   				{Answer}
   			</div>
   			{/block:Answer}
-  			{block:IndexPage}<p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>{/block:IndexPage}
+
+
+
   		</article>
   		{/block:Posts}
 
