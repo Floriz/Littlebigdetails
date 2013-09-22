@@ -38,18 +38,35 @@
       margin: 0 20px 0 0;
     }
 
+    
+    #logo {
+      margin-top: 28px;
+      height: 48px;
+      padding-left: 10px;
+      float: left;
+    } 
+
     #logo a {
       color: #010101;
       text-decoration: none;
-    }
+      font-size: 36px;
+    } 
 
- #logo a:hover {
+    #logo a:hover {
       color: #ee0000;
       text-decoration: none;
     }
 
+    #hand {
+      margin-top: 20px;
+      height: 48px;
+      padding-left: 10px;
+      float: left;
+    }
+
     header {
       border-bottom: 1px solid black;
+      height: 100px;
     }
 
     h1 {
@@ -57,22 +74,42 @@
     }
 
     #nav {
+      font-size: 18px;
       float: right;
+      margin-top: 40px;
+      list-style: none;
+      font-weight: lighter;
+    }
+
+    #nav li {
+      float: left;
+      margin-left: 30px;
+    }
+
+    .links {
+      color: #010101;
+      text-decoration: none;
+    }
+
+    .links:hover {
+      color: #ee0000;
     }
 
     #search {
-      float: right;
+      float: left;
     }
 
     .submit {
-      padding: 1em;
-      background: red;
+      padding: 12px;      
+      background: #ee0000;
       color: white;
       text-decoration: none;
       border-radius: 5px;
     }
 
-
+    .submit:hover {
+      background: #ff0000;
+    }
 
 		img, video, object, embed {
 			max-width: 100%;
@@ -99,18 +136,15 @@
 <body>
 	<header id="header" class="clearfix">
     <div class="container">
+      <a href="/"><img src="http://static.tumblr.com/lrdmbyy/NHBmtjiuk/littlebighand.png" alt="{Title}" id="hand"></a>
   		<h1 id="logo"><a href="/">{Title}</a></h1>
-  		{block:Description}<div class="description">{Description}</div>{/block:Description}
   		<ul id="nav">
-  			{block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
-  			<li><a href="/archive">{lang:Archive}</a></li>
-  			{block:AskEnabled}<li><a href="/ask">{AskLabel}</a></li>{/block:AskEnabled}
-        <li><a href="#" class="submit">Submit Detail</a></li>
+  			{block:HasPages}{block:Pages}<li><a href="{URL}" class="links">{Label}</a></li>{/block:Pages}{/block:HasPages}
+  			<li><a href="/archive" class="links">{lang:Archive}</a></li>
+  			{block:AskEnabled}<li><a href="/ask" class="links">{AskLabel}</a></li>{/block:AskEnabled}
+        <li><a href="/submit" class="submit">Submit Detail</a></li>
   		</ul>
-  		<form id="search" action="/search" method="get">
-  			<input type="text" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
-  			<input type="submit" value="{lang:Search}">
-  		</form>
+
     </div>
 
 	</header>
@@ -118,6 +152,11 @@
 
     <div class="sec-col">
       <h2>Your daily dose of design inspiration.</h2>
+      <form id="search" action="/search" method="get">
+        <input type="text" placeholder="{lang:Search}" name="q" value="{SearchQuery}">
+        <input type="submit" value="{lang:Search}">
+      </form>
+
     </div>
 
   	<section class="main-col">
