@@ -271,10 +271,124 @@
 
       }
 
+    .like-button {
+      padding: 10px 10px 10px 10px;
+      font-size: 24px;
+      font-weight: lighter;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #C0C0C0;
+      border: 1px solid #C0C0C0;
+      background-color: #ffffff;
+      width: 140px;
+
+    }
+
+    .my-like {
+        background-image: url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png) !important;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+
+        width: 24px;
+        height: 24px;
+
+    }
+    .my-liked, .my-like:hover {
+        background-image: url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png) !important;
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: top;
+        width: 24px;
+        height: 24px;
+    }
+
+
+    .tags {
+    text-decoration: none;
+    color: #C0C0C0;
+    float: left;
+    width: 480px;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: lighter;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .tags a {
+    text-decoration: none;
+    color: #C0C0C0;
+    font-weight: lighter;
+
+    }
+
+
     .meta {
       float: right;
       width: 60px;
+      margin-top: 60px;
+      font-weight: lighter;
+      text-align: center;
     }
+
+    .meta a {
+      color: #010101;
+      text-decoration: none;
+    }
+
+
+    .date-icon {
+    background: url(http://static.tumblr.com/lrdmbyy/LNPmtp8u3/date.png) no-repeat;
+    height: 36px;
+    width: 36px;
+    margin-left: 12px;
+    display: block;
+    }
+
+    .date {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    }
+
+    .cal-date {
+    font-weight: bold;
+    padding-top: 10px;
+    }
+
+    .comments-icon {
+    background: url(http://static.tumblr.com/lrdmbyy/yEpmtp8uh/comments.png) no-repeat;
+    height: 36px;
+    width: 36px;
+    margin-left: 12px;
+    display: block;
+
+    }
+
+    .comments {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    }
+
+    .likes-icon {
+    background: url(http://static.tumblr.com/lrdmbyy/uGYmtp8ur/favorites.png) no-repeat;
+    height: 36px;
+    width: 36px;
+    margin-left: 12px;
+    display: block;
+
+    }
+
+    .likes {
+    margin-top: 6px;
+    }
+
+
+
+
+ 
+            
+
+      
 
     img, video, object, embed {
       max-width: 100%;
@@ -362,43 +476,46 @@
 
         {block:Date}
           <div class="meta">
-            {block:NewDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:NewDayDate}
-            {block:SameDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:SameDayDate}
-
-            <div class="cal">
             
-            {block:NewDayDate}<p>{ShortMonth}</p>{/block:NewDayDate}
-            {block:SameDayDate}<p>{ShortMonth}</p>{/block:SameDayDate}
+
+            <a href="{Permalink}" class="date-icon">
+
+            {block:NewDayDate}<p class="cal-date">{DayOfMonth}</p>{/block:NewDayDate}
+            {block:SameDayDate}<p class="cal-date">{DayOfMonth}</p>{/block:SameDayDate}
+
+            </a>            
+
+            <div class="date">
+
+            {block:NewDayDate}<a href="{Permalink}">{ShortMonth}</a>{/block:NewDayDate}
+            {block:SameDayDate}<a href="{Permalink}">{ShortMonth}</a>{/block:SameDayDate}
 
             </div>
+
+            <a href="{Permalink}" class="comments-icon">
+            
+            </a>            
+
 
             <div class="comments">
 
-            </div>
-
-             <div class="favorites">
+            <a href="{Permalink}#disqus_thread" alt="{lang:Comments}">0</a>
 
             </div>
 
+           <a href="{Permalink}" class="likes-icon">
+            
+            </a>    
 
-            http://static.tumblr.com/lrdmbyy/LNPmtp8u3/date.png
-            http://static.tumblr.com/lrdmbyy/yEpmtp8uh/comments.png
-            http://static.tumblr.com/lrdmbyy/uGYmtp8ur/favorites.png
+            <div class="likes">
 
-           <!--discus comment counter-->    
+            <a href="{Permalink}" class="notes">{NoteCount}</a>
 
-          <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = 'littlebigdetails'; // required: replace example with your forum shortname
+            </div>
 
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function () {
-              var s = document.createElement('script'); s.async = true;
-              s.type = 'text/javascript';
-              s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-              (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-          }());
-          </script>
+
+
+
 
 
           </div>
@@ -438,6 +555,12 @@
         {block:Photo}
         <div class="photo">
             {LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
+    
+            <div class="like-button">
+
+            <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like">Like</div>
+
+            </div>
 
             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
         </div>
@@ -481,6 +604,7 @@
         </div>
         {/block:Answer}
 
+      {block:HasTags}<div class="tags"># {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}</div>{/block:HasTags}
 
 
       </article>
@@ -507,5 +631,41 @@
       {/block:Pagination}
     </section><!--close content-->
   </div>
+
+           <!--like button-->
+          <script>
+          window.onload = function () {
+          document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
+          document.addEventListener( 'click', function ( event ) {
+              var myLike = event.target;
+              if( myLike.className.indexOf( 'my-like' ) > -1 ) {
+                  var frame = document.getElementById( 'my-like-frame' ),
+                      liked = ( myLike.className == 'my-liked' ),
+                      command = liked ? 'unlike' : 'like',
+                      reblog = myLike.getAttribute( 'data-reblog' ),
+                      id = myLike.getAttribute( 'data-id' ),
+                      oauth = reblog.slice( -8 );
+                  frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+                  liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
+              };
+          }, false );
+          };
+          </script>
+
+           <!--discus comment counter-->    
+
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'littlebigdetails'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function () {
+              var s = document.createElement('script'); s.async = true;
+              s.type = 'text/javascript';
+              s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+              (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          </script>
+
 </body>
 </html>
