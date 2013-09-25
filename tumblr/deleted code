@@ -1,0 +1,44 @@
+delete things
+
+  		{block:Description}<div class="description">{Description}</div>{/block:Description}
+
+
+  		      background-image: url(http://static.tumblr.com/lrdmbyy/NHBmtjiuk/littlebighand.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+
+
+      -webkit-font-smoothing: subpixel-antialiased;
+      -webkit-font-smoothing: antialiased;
+
+
+        <input type="submit" value="{lang:Search}">
+
+{block:IndexPage}<p><a href="{Permalink}" class="permalink">{lang:Permalink}</a></p>{/block:IndexPage}
+
+  			<div class="meta">
+       
+        </div>
+
+
+                {block:SameDayDate}<p>{Month} {DayOfMonth}</p>{/block:SameDayDate}
+
+
+ #followerscounter-count {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 24px;
+      padding-right: 3px;
+    }
+
+
+    .sponsored {
+      width: 240px;
+      margin-top: 30px;
+
+    }
+
+        #sponsored {
+      width: 240px;
+      margin-top: 30px;
+      float: left;
+    }
