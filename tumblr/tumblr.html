@@ -247,7 +247,6 @@
     .detail {
       border: 30px solid #f8f8f8;
       max-width: 480px;
-      float: left;
     }
 
     .caption {
@@ -271,7 +270,7 @@
 
       }
 
-    .like-button {
+    .my-like {
       padding: 10px 10px 10px 10px;
       font-size: 24px;
       font-weight: lighter;
@@ -279,30 +278,27 @@
       border-radius: 5px;
       color: #C0C0C0;
       border: 1px solid #C0C0C0;
-      background-color: #ffffff;
       width: 140px;
-
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 24px;
+      text-align: center;
     }
 
-    .my-like {
-        background-image: url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png) !important;
-        cursor: pointer;
-        display: inline-block;
-        vertical-align: top;
-
-        width: 24px;
-        height: 24px;
-
-    }
-    .my-liked, .my-like:hover {
-        background-image: url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png) !important;
-        cursor: pointer;
-        display: inline-block;
-        vertical-align: top;
-        width: 24px;
-        height: 24px;
+    .my-like span:before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      background: #fff url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png)  no-repeat;
     }
 
+    .my-liked span:before,
+    .my-like:hover span:before {
+      background: #fff url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
+    }
 
     .tags {
     text-decoration: none;
@@ -554,11 +550,11 @@
         {/block:Audio}
         {block:Photo}
         <div class="photo">
-            {LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
+            <a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>
     
             <div class="like-button">
 
-            <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like">Like</div>
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
 
             </div>
 
