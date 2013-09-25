@@ -269,7 +269,7 @@
       color: #ff0000;
       }
 
-    .action-button {
+    .my-like, .my-liked, .reblog {
       padding: 10px 10px 10px 10px;
       margin-top: 30px;
       font-size: 24px;
@@ -281,8 +281,13 @@
       cursor: pointer;
       display: inline-block;
       vertical-align: top;
-      line-height: 24px;
+      line-height: 32px;
       text-align: center;
+    }
+
+    .my-like span,
+    .my-liked span {
+      pointer-events: none;
     }
 
     .my-liked span:before,
@@ -292,12 +297,19 @@
       width: 24px;
       height: 24px;
       margin-right: 10px;
-      background: #fff url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png)  no-repeat;
+    }
+
+    .my-like span:before {
+      background: url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png)  no-repeat;
+    }
+
+    .my-liked span:before {
+      background: url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png)  no-repeat;
     }
 
     .my-liked:hover span:before,
     .my-like:hover span:before {
-      background: #fff url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
+      background: url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
     }
 
     .reblog span:before {
@@ -306,11 +318,13 @@
       width: 24px;
       height: 24px;
       margin-right: 10px;
-      background: #fff url(http://static.tumblr.com/lrdmbyy/HvWmtpfuy/reblog-icon.png)  no-repeat;
+      position: relative;
+      top: 2px;
+      background: url(http://static.tumblr.com/lrdmbyy/HvWmtpfuy/reblog-icon.png) no-repeat;
     }
 
     .reblog:hover span:before {
-      background: #fff url(http://static.tumblr.com/lrdmbyy/Tdomtpfvc/reblog-icon-hover.png)  no-repeat;
+      background: url(http://static.tumblr.com/lrdmbyy/Tdomtpfvc/reblog-icon-hover.png)  no-repeat;
     }
 
     .tags {
