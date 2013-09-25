@@ -274,7 +274,7 @@
 
       }
 
-    .my-like {
+    .my-like, .my-liked {
       padding: 10px 10px 10px 10px;
       font-size: 24px;
       font-weight: lighter;
@@ -289,7 +289,7 @@
       line-height: 24px;
       text-align: center;
     }
-
+    .my-liked span:before,
     .my-like span:before {
       content: "";
       display: inline-block;
@@ -299,7 +299,7 @@
       background: #fff url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png)  no-repeat;
     }
 
-    .my-liked span:before,
+    .my-liked:hover span:before,
     .my-like:hover span:before {
       background: #fff url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
     }
