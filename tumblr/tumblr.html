@@ -305,6 +305,37 @@
       background: #fff url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
     }
 
+
+    .reblog {
+      padding: 10px 10px 10px 10px;
+      margin-top: 30px;
+      font-size: 24px;
+      font-weight: lighter;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #C0C0C0;
+      border: 1px solid #C0C0C0;
+      width: 140px;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 24px;
+      text-align: center;
+    }
+    .reblog span:before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      background: #fff url(http://static.tumblr.com/lrdmbyy/HvWmtpfuy/reblog-icon.png)  no-repeat;
+    }
+
+    .reblog span:before,
+    .reblog:hover span:before {
+      background: #fff url(http://static.tumblr.com/lrdmbyy/Tdomtpfvc/reblog-icon-hover.png)  no-repeat;
+    }
+
     .tags {
     text-decoration: none;
     color: #C0C0C0;
@@ -560,6 +591,9 @@
             <div class="like-button">
 
               <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="reblog" title="Reblog"><span>Reblog</span></div>
+
 
             </div>
 
