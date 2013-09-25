@@ -192,6 +192,18 @@
       clear: both;
     }
 
+    article:before,
+    article:after {
+        content: "";
+        display: table;
+    } 
+    article:after {
+        clear: both;
+    }
+    article {
+        zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+    }
+
     .twitter-follow-button {
       margin-top: 15px;
       width: 240px;
