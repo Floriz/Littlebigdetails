@@ -188,6 +188,10 @@
       border: 1px solid #C0C0C0;
     }
 
+    article {
+      clear: both;
+    }
+
     .twitter-follow-button {
       margin-top: 15px;
       width: 240px;
@@ -338,6 +342,14 @@
 
       {block:Posts}
       <article class="post {TagsAsClasses}">
+
+        {block:Date}
+          <div class="meta">
+            {block:NewDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:NewDayDate}
+            {block:SameDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:SameDayDate}
+          </div>
+        {/block:Date}
+
         {block:Text}
         <div class="text">
           {block:Title}<h3>{Title}</h3>{/block:Title}
@@ -373,17 +385,7 @@
         <div class="photo">
             {LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
 
-            {block:Date}
-              <div class="meta">
-                {block:NewDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:NewDayDate}
-                {block:SameDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:SameDayDate}
-              </div>
-            {/block:Date}
-
             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-
-
-
         </div>
         {/block:Photo}
         {block:Photoset}
