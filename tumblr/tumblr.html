@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-	<meta name="viewport" content="width=device-width">
-	<title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
-	{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width">
+  <title>{Title}{block:PostSummary} &mdash; {PostSummary}{/block:PostSummary}</title>
+  {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
 
-	<link rel="apple-touch-icon" href="{PortraitURL-128}">
-	<link rel="shortcut icon" href="{Favicon}">
-	<link rel="alternate" type="application/rss+xml" href="{RSS}">
-	<!--Normalize 2.1.0 CSS-->
-	<link rel="stylesheet" href="http://static.tumblr.com/cqczc5x/kYdmihjuj/normalize.css" type="text/css" media="all">
-	<style type="text/css">
+  <link rel="apple-touch-icon" href="{PortraitURL-128}">
+  <link rel="shortcut icon" href="{Favicon}">
+  <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <!--Normalize 2.1.0 CSS-->
+  <link rel="stylesheet" href="http://static.tumblr.com/cqczc5x/kYdmihjuj/normalize.css" type="text/css" media="all">
+  <style type="text/css">
 
-		body,html {
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-		}
+    body,html {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
 
     .container {
       width: 960px;
       margin: 0 auto;
     }
 
-		.main-col,
-		.sec-col {
-			float: left;
-		}
+    .main-col,
+    .sec-col {
+      float: left;
+    }
 
-		.main-col {
-			width: 620px;
+    .main-col {
+      width: 620px;
       margin: 0 0 0 20px;
-		}
+    }
 
     .sec-col {
       width: 300px;
@@ -124,6 +124,7 @@
     .searchfield {
       padding: 10px 10px 10px 10px;
       font-size: 18px;
+      margin-top: 5px;
       font-weight: lighter;
       text-decoration: none;
       border-radius: 5px;
@@ -131,6 +132,72 @@
       border: 1px solid #C0C0C0;
       background-color: #ffffff;
       width: 190px;
+    }
+
+    .balsamiq {
+      font-weight: lighter;
+      margin-top: 30px;
+      font-size: 18px;
+      color: #010101;
+      text-decoration: none;
+      line-height: 26px;
+      float: left;
+      width: 240px;
+    }
+
+    .balsamiq-logo {
+      float: left;
+      width: 240px;
+      margin-top: -10px;
+    }
+
+    #followerscounter-avatar {
+      visibility: hidden;
+      display:none !important;
+    }
+
+    #followerscounter-text {
+      margin-left: 0px !important;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: lighter;
+      color: #101010;
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 30px;
+    }
+
+    #followerscounter-container a {
+      visibility: hidden;
+      display: none;
+    }
+
+    #followerscounter-count:after {   
+      color: #010101;
+    }
+
+    #followerscounter-count:before {
+      content: " ";
+      display: block;
+      padding-left: 200px;
+    }
+
+    #btn {
+      margin-top: 20px;
+      float: left;
+      width: 240px;
+      border: 1px solid #C0C0C0;
+    }
+
+    .twitter-follow-button {
+      margin-top: 15px;
+      width: 240px;
+      float: left;
+    }
+ 
+    .facebook {
+      margin-top: 20px;
+      width: 240px;
+      float: left;
     }
 
     .submit {
@@ -189,100 +256,122 @@
       width: 60px;
     }
 
-		img, video, object, embed {
-			max-width: 100%;
-			height: auto !important;
-		}
+    img, video, object, embed {
+      max-width: 100%;
+      height: auto !important;
+    }
 
-		.clearfix {zoom:1;}
-		.clearfix:before, .clearfix:after {
-		  content: "\0020";
-		  display: block;
-		  height: 0;
-		  overflow: hidden; }
-		.clearfix:after {clear: both;}
+    .clearfix {zoom:1;}
+    .clearfix:before, .clearfix:after {
+      content: "\0020";
+      display: block;
+      height: 0;
+      overflow: hidden; }
+    .clearfix:after {clear: both;}
 
-		/*Tumblr inherited */
-		iframe#tumblr_controls {}
-		.search_query {}
-		.read_more_container a {}
+    /*Tumblr inherited */
+    iframe#tumblr_controls {}
+    .search_query {}
+    .read_more_container a {}
 
 
-	</style>
-	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  </style>
+  <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 </head>
 <body>
-	<header id="header" class="clearfix">
+  <header id="header" class="clearfix">
     <div class="container">
       <a href="/"><img src="http://static.tumblr.com/lrdmbyy/NHBmtjiuk/littlebighand.png" alt="{Title}" id="hand"></a>
-  		<h1 id="logo"><a href="/">{Title}</a></h1>
-  		<ul id="nav">
-  			{block:HasPages}{block:Pages}<li><a href="{URL}" class="links">{Label}</a></li>{/block:Pages}{/block:HasPages}
-  			<li><a href="/archive" class="links">{lang:Archive}</a></li>
-  			{block:AskEnabled}<li><a href="/ask" class="links">{AskLabel}</a></li>{/block:AskEnabled}
+      <h1 id="logo"><a href="/">{Title}</a></h1>
+      <ul id="nav">
+        {block:HasPages}{block:Pages}<li><a href="{URL}" class="links">{Label}</a></li>{/block:Pages}{/block:HasPages}
+        <li><a href="/archive" class="links">{lang:Archive}</a></li>
+        {block:AskEnabled}<li><a href="/ask" class="links">{AskLabel}</a></li>{/block:AskEnabled}
         <li><a href="/submit" class="submit">Submit Detail</a></li>
-  		</ul>
+      </ul>
 
     </div>
 
-	</header>
+  </header>
   <div class="container" class="clearfix">
 
     <div class="sec-col">
       <h2 class="description">Your daily dose of design inspiration.</h2>
-      <form id="search" action="/search" method="get">
 
+      <!--search-->
+      <form id="search" action="/search" method="get">
         <input type="text" class="searchfield" placeholder="{lang:Search}..." name="q" value="{SearchQuery}">
       </form>
 
+      <!--sponsored-->
+      <div id="sponsors">
+
+      <h3 class="balsamiq">Sponsored by</h3>
+      <a href="http://www.balsamiq.com/?s=lbd2012" class="balsamiq-logo"><img src="http://static.tumblr.com/lrdmbyy/YN1m02k7d/balsamiq-banner.png"></a>
+
+      </div>
+
+      <!--tumblr-->
+      <div id="followerscounter-container"></div><script type="text/javascript" src="http://fccdn.followerscounter.com/widget/littlebigdetails/text"></script>
+
+      <iframe class="btn" frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="240" src="http://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=undefined&color_scheme=light"></iframe>
+
+      <!--twitter-->
+      <a href="https://twitter.com/littlebigdetail" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @littlebigdetail</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+
+      <!--facebook-->
+      <iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Flittlebigdetails&amp;width=220&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:220px; height:21px;" allowTransparency="true" class="facebook"></iframe>
+
     </div>
 
-  	<section class="main-col">
+    <section class="main-col">
 
-  		{block:SearchPage}
-  		<div class="result">
-  			<p>{lang:Found SearchResultCount results for SearchQuery 2}</p>
-  			{block:NoSearchResults}<p>{lang:No results for SearchQuery 2}</p>{/block:NoSearchResults}
-  		</div>
-  		{/block:SearchPage}
-  		{block:TagPage}<div class="result"><p>{lang:TagResultCount posts tagged Tag 3}</p></div>{/block:TagPage}
+      {block:SearchPage}
+      <div class="result">
+        <p>{lang:Found SearchResultCount results for SearchQuery 2}</p>
+        {block:NoSearchResults}<p>{lang:No results for SearchQuery 2}</p>{/block:NoSearchResults}
+      </div>
+      {/block:SearchPage}
+      {block:TagPage}<div class="result"><p>{lang:TagResultCount posts tagged Tag 3}</p></div>{/block:TagPage}
 
-  		{block:Posts}
-  		<article class="post {TagsAsClasses}">
-  			{block:Text}
-  			<div class="text">
-  				{block:Title}<h3>{Title}</h3>{/block:Title}
-  				{Body}
-  			</div>
-  			{/block:Text}
-  			{block:Quote}
-  			<div class="quote">
-  				<blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
-  				{block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
-  			</div>
-  			{/block:Quote}
-  			{block:Link}
-  			<div class="link">
-  				<h3><a href="{URL}" {Target}>{Name}</a></h3>
-  				{block:Description}<div class="caption">{Description}</div>{/block:Description}
-  			</div>
-  			{/block:Link}
-  			{block:Video}
-  			<div class="video">
-  				{Video-500}
-  				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-  			</div>
-  			{/block:Video}
-  			{block:Audio}
-  			<div class="audio">
-  				{block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
-  				{AudioPlayerBlack}
-  				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-  			</div>
-  			{/block:Audio}
-  			{block:Photo}
-  			<div class="photo">
-  					{LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
+      {block:Posts}
+      <article class="post {TagsAsClasses}">
+        {block:Text}
+        <div class="text">
+          {block:Title}<h3>{Title}</h3>{/block:Title}
+          {Body}
+        </div>
+        {/block:Text}
+        {block:Quote}
+        <div class="quote">
+          <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
+          {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+        </div>
+        {/block:Quote}
+        {block:Link}
+        <div class="link">
+          <h3><a href="{URL}" {Target}>{Name}</a></h3>
+          {block:Description}<div class="caption">{Description}</div>{/block:Description}
+        </div>
+        {/block:Link}
+        {block:Video}
+        <div class="video">
+          {Video-500}
+          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        </div>
+        {/block:Video}
+        {block:Audio}
+        <div class="audio">
+          {block:AlbumArt}<img src="{AlbumArtURL}" alt="">{/block:AlbumArt}
+          {AudioPlayerBlack}
+          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        </div>
+        {/block:Audio}
+        {block:Photo}
+        <div class="photo">
+            {LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
 
             {block:Date}
               <div class="meta">
@@ -290,77 +379,77 @@
                 {block:SameDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:SameDayDate}
               </div>
             {/block:Date}
-            
-  					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
 
 
 
-  			</div>
-  			{/block:Photo}
-  			{block:Photoset}
-  			<div class="photoset">
-  				{block:Photos}
-  					<img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-  					{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-  			    {/block:Photos}
-  				{block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-  			</div>
-  			{/block:Photoset}
+        </div>
+        {/block:Photo}
+        {block:Photoset}
+        <div class="photoset">
+          {block:Photos}
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+            {/block:Photos}
+          {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        </div>
+        {/block:Photoset}
 
-  			{block:Panorama}
-  			<div class="panorama">
-  			    {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
-  			    {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
-  			</div>
-  			{/block:Panorama}
+        {block:Panorama}
+        <div class="panorama">
+            {LinkOpenTag}<img src="{PhotoURL-Panorama}" alt="{PhotoAlt}" />{LinkCloseTag}
+            {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+        </div>
+        {/block:Panorama}
 
-  			{block:Chat}
-  			<div class="chat">
-  				{block:Title}<h3>{Title}</h3>{/block:Title}
-  				<ul class="conversation">
-  					{block:Lines}
-  					<li class="line {Alt}">
-  						{block:Label}<span class="person">{Label}</span>{/block:Label}
-  						<span class="person-said">{Line}</span>
-  					</li>
-  					{/block:Lines}
-  				</ul>
-  			</div>
-  			{/block:Chat}
-  			{block:Answer}
-  			<div class="answer">
-  				<img src="{AskerPortraitURL-40}">
-  				{Asker}
-  				{Question}
-  				{Answer}
-  			</div>
-  			{/block:Answer}
+        {block:Chat}
+        <div class="chat">
+          {block:Title}<h3>{Title}</h3>{/block:Title}
+          <ul class="conversation">
+            {block:Lines}
+            <li class="line {Alt}">
+              {block:Label}<span class="person">{Label}</span>{/block:Label}
+              <span class="person-said">{Line}</span>
+            </li>
+            {/block:Lines}
+          </ul>
+        </div>
+        {/block:Chat}
+        {block:Answer}
+        <div class="answer">
+          <img src="{AskerPortraitURL-40}">
+          {Asker}
+          {Question}
+          {Answer}
+        </div>
+        {/block:Answer}
 
 
 
-  		</article>
-  		{/block:Posts}
+      </article>
+      {/block:Posts}
 
-  		{block:PermalinkPagination}
-  		<div class="pagination">
-  			{block:PreviousPost}<a class="prev"href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
-  			{block:NextPost}<a class="next" href="{NextPost}">{lang:Next post}</a>{/block:NextPost}
-  		</div>
-  		{/block:PermalinkPagination}
+      {block:PermalinkPagination}
+      <div class="pagination">
+        {block:PreviousPost}<a class="prev"href="{PreviousPost}">{lang:Previous post}</a>{/block:PreviousPost}
+        {block:NextPost}<a class="next" href="{NextPost}">{lang:Next post}</a>{/block:NextPost}
+      </div>
+      {/block:PermalinkPagination}
 
-  		{block:Pagination}
-  		<div class="pagination">
-  			{block:PreviousPage}<a class="prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
+      {block:Pagination}
+      <div class="pagination">
+        {block:PreviousPage}<a class="prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
 
-  			{block:JumpPagination length="5"}
-  				{block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
-  				{block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
-  			{/block:JumpPagination}
+        {block:JumpPagination length="5"}
+          {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+          {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+        {/block:JumpPagination}
 
-  			{block:NextPage}<a class="next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
-  		</div>
-  		{/block:Pagination}
-  	</section><!--close content-->
+        {block:NextPage}<a class="next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
+      </div>
+      {/block:Pagination}
+    </section><!--close content-->
   </div>
 </body>
 </html>
