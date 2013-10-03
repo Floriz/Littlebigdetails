@@ -181,6 +181,11 @@
       width: 500px;
     }
 
+    a {
+      text-decoration: none;
+
+    }
+
     #nav {
       font-size: 18px;
       float: right;
@@ -293,7 +298,7 @@
     .post {
 
       margin-top: 30px;
-      margin-bottom: 60px;
+      margin-bottom: 90px;
     }
 
 
@@ -310,12 +315,15 @@
       color: #101010;
     }
 
-    .text a {
+    .text p a {
       color: #ee0000;
+      text-decoration: none;
     }
 
-    .text a:hover {
+    .text p a:hover {
       color: #ff0000;
+      text-decoration: none;
+
       }
     }
 
@@ -428,6 +436,7 @@
     .my-reblog span:before {
       content: "";
       display: inline-block;
+      color: #C0C0C0;
       width: 24px;
       height: 24px;
       margin-right: 10px;
@@ -515,11 +524,61 @@
     margin-top: 6px;
     }
 
+    .pagination {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 24px;
+    text-decoration: none;     
+    color: #c0c0c0;
+    width: 540px;
+    text-align: center;
+    }
 
+    .pagination a {
+    color: #ee0000;
+    }
 
+    .pagination a:hover {
+    color: #ff0000;
+    }
 
- 
-            
+    .prev {
+    float: left;
+    }
+
+    .next {
+    float: right;
+    } 
+
+    .footer {
+    height: 120px;
+    background-color: #c0c0c0;
+    float: left;
+    display: inline;
+    }
+
+    .newsletter-message { 
+    margin-top: 48px;
+    height: 48px;
+    padding-left: 10px;
+    float: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    }
+
+    .newsletter-field {
+      padding: 10px 10px 10px 10px;
+      font-size: 18px;
+      margin-top: 43px;
+      text-decoration: none;
+      font-weight: 200;
+      border-radius: 5px;
+      color: #C0C0C0;
+      border: 1px solid #C0C0C0;
+      background-color: #ffffff;
+      width: 190px;
+    }
 
       
 
@@ -658,15 +717,35 @@
         <div class="text">
           {block:Title}<h3>{Title}</h3>{/block:Title}
           {Body}
+          <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
+
         </div>
         {/block:Text}
         {block:Quote}
         <div class="quote">
           <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
           {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+
+            <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
+
         </div>
         {/block:Quote}
         {block:Link}
+    
+
+
         <div class="link">
           <h3><a href="{URL}" {Target}>{Name}</a></h3>
           {block:Description}<div class="caption">{Description}</div>{/block:Description}
@@ -675,7 +754,17 @@
         {block:Video}
         <div class="video">
           {Video-500}
+
+          <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
+
           {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+
         </div>
         {/block:Video}
         {block:Audio}
@@ -756,7 +845,7 @@
       <div class="pagination">
         {block:PreviousPage}<a class="prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
 
-        {block:JumpPagination length="5"}
+        {block:JumpPagination length="10"}
           {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
           {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
         {/block:JumpPagination}
@@ -765,6 +854,18 @@
       </div>
       {/block:Pagination}
     </section><!--close content-->
+  </div>
+
+
+  <div class="container footer">
+
+    <p class="newsletter-message">Looking for more? Sign up for our weekly newsletter!</p>
+
+    <form id="search" action="/search" method="get">
+        <input type="input" class="newsletter-field" placeholder="Your Email" name="q" value="{SearchQuery}">
+        <input type="submit" value="Submit">
+    </form>
+
   </div>
 
            <!--like button-->
