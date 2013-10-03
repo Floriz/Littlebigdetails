@@ -16,6 +16,7 @@
 
     body,html {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 200;
     }
 
     .container {
@@ -40,7 +41,7 @@
 
     
     #logo {
-      margin-top: 28px;
+      margin-top: 48px;
       height: 48px;
       padding-left: 10px;
       float: left;
@@ -58,17 +59,21 @@
     }
 
     #hand {
-      margin-top: 20px;
+      margin-top: 40px;
       height: 48px;
       float: left;
-      -webkit-transition-duration: 0.7s;
-      -moz-transition-duration: 0.7s;
-      -o-transition-duration: 0.7s;
-      transition-duration: 0.7s;
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+      transition-duration: 0.5s;
       -webkit-transition-property: -webkit-transform;
       -moz-transition-property: -moz-transform;
       -o-transition-property: -o-transform;
       transition-property: transform;
+      -webkit-transition-timing-function: cubic-bezier(.81,0,0,1.24);
+      -moz-transition-timing-function: cubic-bezier(.81,0,0,1.24);
+      -o-transition-timing-function: cubic-bezier(.81,0,0,1.24);
+      transition-timing-function: cubic-bezier(.81,0,0,1.24);
       overflow:hidden;
     }
 
@@ -76,31 +81,116 @@
       -webkit-transform:rotate(90deg);
       -moz-transform:rotate(90deg);
       -o-transform:rotate(90deg);
+      transform: rotate(90deg);
     }
 
     #hand:active {  
-      -webkit-transform:rotate(90deg);
-      -moz-transform:rotate(90deg);
-      -o-transform:rotate(90deg);
-      padding-left: 10px;
-      padding-right: -10px;
+      -webkit-animation: shooter .8s infinite;
+      -moz-animation: shooter .8s infinite;
+      -o-animation: shooter .8s infinite;
+      animation: shooter .8s infinite;
+    }
+
+    @-webkit-keyframes shooter {
+      0% {
+        -webkit-transform: rotate(90deg);
+      }
+      15% {
+        -webkit-transform: rotate(38deg);
+      }
+      90% {
+        -webkit-transform: rotate(90deg);
+      }
+      100% {
+        -webkit-transform: rotate(90deg);
+      }
+    }
+    @-moz-keyframes shooter {
+      0% {
+        -moz-transform: rotate(90deg);
+      }
+      15% {
+        -moz-transform: rotate(38deg);
+      }
+      90% {
+        -moz-transform: rotate(90deg);
+      }
+      100% {
+        -moz-transform: rotate(90deg);
+      }
+    }
+    @-o-keyframes shooter {
+      0% {
+        -o-transform: rotate(90deg);
+      }
+      15% {
+        -o-transform: rotate(38deg);
+      }
+      90% {
+        -o-transform: rotate(90deg);
+      }
+      100% {
+        -o-transform: rotate(90deg);
+      }
+    }
+    @keyframes shooter {
+      0% {
+        transform: rotate(90deg);
+      }
+      15% {
+        transform: rotate(38deg);
+      }
+      90% {
+        transform: rotate(90deg);
+      }
+      100% {
+        transform: rotate(90deg);
+      }
     }
 
     header {
-      border-bottom: 1px solid black;
-      height: 100px;
+     /* border-bottom: 1px solid black; */
+      height: 120px;
     }
 
     h1 {
       float: left;
     }
 
+    h3 {
+      color: #010101;
+      font-size: 24px;
+      margin-top: 6px;
+      margin-bottom: 0px;
+    }
+
+    h3 a {
+      text-decoration: none;
+      color: #ee0000;
+    }
+
+    h2 a:hover {
+      color: #ff0000;
+    }
+
+    blockquote {
+      margin-top: 0px;
+      margin-left: 0px;
+      font-size: 48px;
+      font-weight: 200;
+      width: 500px;
+    }
+
+    a {
+      text-decoration: none;
+
+    }
+
     #nav {
       font-size: 18px;
       float: right;
-      margin-top: 40px;
+      margin-top: 60px;
       list-style: none;
-      font-weight: lighter;
     }
 
     #nav li {
@@ -125,8 +215,8 @@
       padding: 10px 10px 10px 10px;
       font-size: 18px;
       margin-top: 5px;
-      font-weight: lighter;
       text-decoration: none;
+      font-weight: 200;
       border-radius: 5px;
       color: #C0C0C0;
       border: 1px solid #C0C0C0;
@@ -135,7 +225,6 @@
     }
 
     .balsamiq {
-      font-weight: lighter;
       margin-top: 30px;
       font-size: 18px;
       color: #010101;
@@ -150,39 +239,6 @@
       width: 240px;
       margin-top: 40px;
     }
-
-/*Tumblr counter 
-    #followerscounter-avatar {
-      visibility: hidden;
-      display:none !important;
-    }
-
-    #followerscounter-text {
-      margin-left: 0px !important;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: lighter;
-      color: #101010;
-      font-size: 18px;
-      line-height: 26px;
-      margin-top: 30px;
-    }
-
-    #followerscounter-container a {
-      visibility: hidden;
-      display: none;
-    }
-
-    #followerscounter-count:after {   
-      color: #010101;
-    }
-
-    #followerscounter-count:before {
-      content: " ";
-      display: block;
-      padding-left: 200px;
-    }
-*/
-
 
 
     .btn {
@@ -221,7 +277,7 @@
     }
 
     .submit {
-      padding: 12px;      
+      padding: 11px 14px 12px 14px;      
       background: #ee0000;
       color: white;
       text-decoration: none;
@@ -234,32 +290,93 @@
 
     .description {
       font-size: 36px;
-      font-weight: lighter;
-      margin-top: 70px;
+      font-weight: 200;
+      margin-top: 30px;
       width: 240px;
     }
 
+    .post {
+
+      margin-top: 30px;
+      margin-bottom: 90px;
+    }
+
+
+
+
+    .text {
+      width: 540px;
+    }   
+
+    .text p {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 200;
+      color: #101010;
+    }
+
+    .text p a {
+      color: #ee0000;
+      text-decoration: none;
+    }
+
+    .text p a:hover {
+      color: #ff0000;
+      text-decoration: none;
+
+      }
+    }
+
+    .quote {
+      width: 540px;
+    }      
+
+    .link {
+      width: 540px;
+    }   
+
+    .video {
+      width: 540px;
+    }  
+
+    .audio {
+      width: 540px;
+    }  
+
+    .photoset {
+      width: 540px;
+    }  
+
+    .answer {
+      width: 540px;
+    }  
+
+    .chat {
+      width: 540px;
+    }  
+
+    .panorama {
+      width: 540px;
+    }  
+
     .photo {
-      margin-top: 70px;
       width: 540px;
     }   
 
     .detail {
       border: 30px solid #f8f8f8;
       max-width: 480px;
-      float: left;
     }
 
     .caption {
       float: left;
-      margin-top: 30px;
+      margin-top: 15px;
       width: 540px;
     }
 
     .caption p {
       font-size: 18px;
       color: #101010;
-      font-weight: lighter;
     }
 
     .caption a {
@@ -268,13 +385,202 @@
 
     .caption a:hover {
       color: #ff0000;
-
       }
+
+    .my-like, .my-liked, .my-reblog {
+      padding: 8px 6px 8px 6px;
+      margin-top: 30px;
+      margin-right: 10px;
+      font-size: 18px;
+      text-decoration: none;
+      border-radius: 5px;
+      color: #C0C0C0;
+      border: 1px solid #C0C0C0;
+      width: 110px;
+      cursor: pointer;
+      display: inline-block;
+      vertical-align: top;
+      line-height: 32px;
+      text-align: center;
+    }
+
+    .my-like span,
+    .my-liked span {
+      pointer-events: none;
+    }
+
+    .my-liked span:before,
+    .my-like span:before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      margin-bottom: -4px;
+      margin-right: 10px;
+    }
+
+    .my-like span:before {
+      background: url(http://static.tumblr.com/lrdmbyy/VN3mtpd2t/like-icon.png)  no-repeat;
+    }
+
+    .my-liked span:before,
+    .my-liked:hover span:before,
+    .my-like:hover span:before {
+      background: url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
+    }
+
+    .my-liked span:after {
+      content: "d";
+    }
+
+    .my-reblog span:before {
+      content: "";
+      display: inline-block;
+      color: #C0C0C0;
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+      position: relative;
+      top: 2px;
+      margin-bottom: -4px;
+      background: url(http://static.tumblr.com/lrdmbyy/HvWmtpfuy/reblog-icon.png) no-repeat;
+    }
+
+    .my-reblog:hover span:before {
+      background: url(http://static.tumblr.com/lrdmbyy/Tdomtpfvc/reblog-icon-hover.png)  no-repeat;
+    }
+
+    .tags {
+    text-decoration: none;
+    color: #C0C0C0;
+    float: left;
+    width: 480px;
+    font-size: 14px;
+    margin-top: 15px;
+    -webkit-font-smoothing: antialiased;
+    }
+
+    .tags a {
+    text-decoration: none;
+    color: #C0C0C0;
+    }
+
 
     .meta {
       float: right;
       width: 60px;
+      text-align: center;
     }
+
+    .meta a {
+      color: #010101;
+      text-decoration: none;
+    }
+
+
+    .date-icon {
+    background: url(http://static.tumblr.com/lrdmbyy/LNPmtp8u3/date.png) no-repeat;
+    height: 36px;
+    width: 36px;
+    margin-left: 12px;
+    display: block;
+    }
+
+    .date {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    }
+
+    .cal-date {
+    font-weight: bold;
+    padding-top: 10px;
+    font-size: 16px;
+    }
+
+    .comments-icon {
+    background: url(http://static.tumblr.com/lrdmbyy/yEpmtp8uh/comments.png) no-repeat;
+    height: 36px;
+    width: 36px;
+    margin-left: 12px;
+    display: block;
+
+    }
+
+    .comments {
+    margin-top: 6px;
+    margin-bottom: 12px;
+    }
+
+    .likes-icon {
+    background: url(http://static.tumblr.com/lrdmbyy/uGYmtp8ur/favorites.png) no-repeat;
+    height: 36px;
+    width: 36px;
+    margin-left: 12px;
+    display: block;
+
+    }
+
+    .likes {
+    margin-top: 6px;
+    }
+
+    .pagination {
+    margin-top: 30px;
+    margin-bottom: 60px;
+    font-size: 24px;
+    text-decoration: none;     
+    color: #c0c0c0;
+    width: 540px;
+    text-align: center;
+    }
+
+    .pagination a {
+    color: #ee0000;
+    }
+
+    .pagination a:hover {
+    color: #ff0000;
+    }
+
+    .prev {
+    float: left;
+    }
+
+    .next {
+    float: right;
+    } 
+
+    .footer {
+    height: 120px;
+    background-color: #c0c0c0;
+    float: left;
+    display: inline;
+    }
+
+    .newsletter-message { 
+    margin-top: 48px;
+    height: 48px;
+    padding-left: 10px;
+    float: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    }
+
+    .newsletter-field {
+      padding: 10px 10px 10px 10px;
+      font-size: 18px;
+      margin-top: 43px;
+      text-decoration: none;
+      font-weight: 200;
+      border-radius: 5px;
+      color: #C0C0C0;
+      border: 1px solid #C0C0C0;
+      background-color: #ffffff;
+      width: 190px;
+    }
+
+      
 
     img, video, object, embed {
       max-width: 100%;
@@ -362,43 +668,46 @@
 
         {block:Date}
           <div class="meta">
-            {block:NewDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:NewDayDate}
-            {block:SameDayDate}<p>{ShortMonth} {DayOfMonth}</p>{/block:SameDayDate}
-
-            <div class="cal">
             
-            {block:NewDayDate}<p>{ShortMonth}</p>{/block:NewDayDate}
-            {block:SameDayDate}<p>{ShortMonth}</p>{/block:SameDayDate}
+
+            <a href="{Permalink}" class="date-icon">
+
+            {block:NewDayDate}<p class="cal-date">{DayOfMonth}</p>{/block:NewDayDate}
+            {block:SameDayDate}<p class="cal-date">{DayOfMonth}</p>{/block:SameDayDate}
+
+            </a>            
+
+            <div class="date">
+
+            {block:NewDayDate}<a href="{Permalink}">{ShortMonth}</a>{/block:NewDayDate}
+            {block:SameDayDate}<a href="{Permalink}">{ShortMonth}</a>{/block:SameDayDate}
 
             </div>
+
+            <a href="{Permalink}" class="comments-icon">
+            
+            </a>            
+
 
             <div class="comments">
 
-            </div>
-
-             <div class="favorites">
+            <a href="{Permalink}#disqus_thread" alt="{lang:Comments}">0</a>
 
             </div>
 
+           <a href="{Permalink}" class="likes-icon">
+            
+            </a>    
 
-            http://static.tumblr.com/lrdmbyy/LNPmtp8u3/date.png
-            http://static.tumblr.com/lrdmbyy/yEpmtp8uh/comments.png
-            http://static.tumblr.com/lrdmbyy/uGYmtp8ur/favorites.png
+            <div class="likes">
 
-           <!--discus comment counter-->    
+            <a href="{Permalink}" class="notes">{NoteCount}</a>
 
-          <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = 'littlebigdetails'; // required: replace example with your forum shortname
+            </div>
 
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function () {
-              var s = document.createElement('script'); s.async = true;
-              s.type = 'text/javascript';
-              s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-              (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-          }());
-          </script>
+
+
+
 
 
           </div>
@@ -408,15 +717,35 @@
         <div class="text">
           {block:Title}<h3>{Title}</h3>{/block:Title}
           {Body}
+          <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
+
         </div>
         {/block:Text}
         {block:Quote}
         <div class="quote">
           <blockquote class="words {Length}">&#8220;{Quote}&#8221;</blockquote>
           {block:Source}<p class="source">&mdash; {Source}</p>{/block:Source}
+
+            <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
+
         </div>
         {/block:Quote}
         {block:Link}
+    
+
+
         <div class="link">
           <h3><a href="{URL}" {Target}>{Name}</a></h3>
           {block:Description}<div class="caption">{Description}</div>{/block:Description}
@@ -425,7 +754,17 @@
         {block:Video}
         <div class="video">
           {Video-500}
+
+          <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
+
           {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
+
         </div>
         {/block:Video}
         {block:Audio}
@@ -437,7 +776,15 @@
         {/block:Audio}
         {block:Photo}
         <div class="photo">
-            {LinkOpenTag}<a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>{LinkCloseTag}
+            <a href="{Permalink}" alt="{lang:Permalink}"><img src="{PhotoURL-HighRes}" class="detail" alt="{PhotoAlt}"/></a>
+    
+            <div class="tumblr-buttons">
+
+              <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
+
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
+
+            </div>
 
             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
         </div>
@@ -445,7 +792,7 @@
         {block:Photoset}
         <div class="photoset">
           {block:Photos}
-            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt} class="detail""/>
             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
             {/block:Photos}
           {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
@@ -481,6 +828,7 @@
         </div>
         {/block:Answer}
 
+      {block:HasTags}<div class="tags"># {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}</div>{/block:HasTags}
 
 
       </article>
@@ -497,7 +845,7 @@
       <div class="pagination">
         {block:PreviousPage}<a class="prev" href="{PreviousPage}">{lang:Previous}</a>{/block:PreviousPage}
 
-        {block:JumpPagination length="5"}
+        {block:JumpPagination length="10"}
           {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
           {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
         {/block:JumpPagination}
@@ -507,5 +855,53 @@
       {/block:Pagination}
     </section><!--close content-->
   </div>
+
+
+  <div class="container footer">
+
+    <p class="newsletter-message">Looking for more? Sign up for our weekly newsletter!</p>
+
+    <form id="search" action="/search" method="get">
+        <input type="input" class="newsletter-field" placeholder="Your Email" name="q" value="{SearchQuery}">
+        <input type="submit" value="Submit">
+    </form>
+
+  </div>
+
+           <!--like button-->
+          <script>
+          window.onload = function () {
+          document.body.insertAdjacentHTML( 'beforeEnd', '<iframe id="my-like-frame" style="display:none;"></iframe>' );
+          document.addEventListener( 'click', function ( event ) {
+              var myLike = event.target;
+              if( myLike.className.indexOf( 'my-like' ) > -1 ) {
+                  var frame = document.getElementById( 'my-like-frame' ),
+                      liked = ( myLike.className == 'my-liked' ),
+                      command = liked ? 'unlike' : 'like',
+                      reblog = myLike.getAttribute( 'data-reblog' ),
+                      id = myLike.getAttribute( 'data-id' ),
+                      oauth = reblog.slice( -8 );
+                  frame.src = 'http://www.tumblr.com/' + command + '/' + oauth + '?id=' + id;
+                  liked ? myLike.className = 'my-like' : myLike.className = 'my-liked';
+              };
+          }, false );
+          };
+          </script>
+
+           <!--discus comment counter-->    
+
+          <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+          var disqus_shortname = 'littlebigdetails'; // required: replace example with your forum shortname
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function () {
+              var s = document.createElement('script'); s.async = true;
+              s.type = 'text/javascript';
+              s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+              (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          </script>
+
 </body>
 </html>

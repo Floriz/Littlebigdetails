@@ -41,4 +41,71 @@ delete things
       width: 240px;
       margin-top: 30px;
       float: left;
+
+
+
+        .btn {
+      float: left;
+      width: 240px;
+      border: 1px solid #C0C0C0;
     }
+    }
+        .tumblr_btn {
+      margin-top: 40px;
+      float: left;
+      width: 240px;
+    }
+
+          <div class="tumblr_btn"
+
+
+
+http://static.tumblr.com/lrdmbyy/LNPmtp8u3/date.png
+http://static.tumblr.com/lrdmbyy/yEpmtp8uh/comments.png
+http://static.tumblr.com/lrdmbyy/uGYmtp8ur/favorites.png
+
+
+
+
+
+photoset
+photo
+audio
+video
+link
+quote
+text
+
+
+
+/*Tumblr counter 
+    #followerscounter-avatar {
+      visibility: hidden;
+      display:none !important;
+    }
+
+    #followerscounter-text {
+      margin-left: 0px !important;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #101010;
+      font-size: 18px;
+      line-height: 26px;
+      margin-top: 30px;
+    }
+
+    #followerscounter-container a {
+      visibility: hidden;
+      display: none;
+    }
+
+    #followerscounter-count:after {   
+      color: #010101;
+    }
+
+    #followerscounter-count:before {
+      content: " ";
+      display: block;
+      padding-left: 200px;
+    }
+*/
+
