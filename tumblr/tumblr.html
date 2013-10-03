@@ -157,6 +157,30 @@
       float: left;
     }
 
+    h3 {
+      color: #010101;
+      font-size: 24px;
+      margin-top: 6px;
+      margin-bottom: 0px;
+    }
+
+    h3 a {
+      text-decoration: none;
+      color: #ee0000;
+    }
+
+    h2 a:hover {
+      color: #ff0000;
+    }
+
+    blockquote {
+      margin-top: 0px;
+      margin-left: 0px;
+      font-size: 48px;
+      font-weight: 200;
+      width: 500px;
+    }
+
     #nav {
       font-size: 18px;
       float: right;
@@ -210,38 +234,6 @@
       width: 240px;
       margin-top: 40px;
     }
-
-/*Tumblr counter 
-    #followerscounter-avatar {
-      visibility: hidden;
-      display:none !important;
-    }
-
-    #followerscounter-text {
-      margin-left: 0px !important;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #101010;
-      font-size: 18px;
-      line-height: 26px;
-      margin-top: 30px;
-    }
-
-    #followerscounter-container a {
-      visibility: hidden;
-      display: none;
-    }
-
-    #followerscounter-count:after {   
-      color: #010101;
-    }
-
-    #followerscounter-count:before {
-      content: " ";
-      display: block;
-      padding-left: 200px;
-    }
-*/
-
 
 
     .btn {
@@ -298,8 +290,68 @@
       width: 240px;
     }
 
-    .photo {
+    .post {
+
       margin-top: 30px;
+      margin-bottom: 60px;
+    }
+
+
+
+
+    .text {
+      width: 540px;
+    }   
+
+    .text p {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 200;
+      color: #101010;
+    }
+
+    .text a {
+      color: #ee0000;
+    }
+
+    .text a:hover {
+      color: #ff0000;
+      }
+    }
+
+    .quote {
+      width: 540px;
+    }      
+
+    .link {
+      width: 540px;
+    }   
+
+    .video {
+      width: 540px;
+    }  
+
+    .audio {
+      width: 540px;
+    }  
+
+    .photoset {
+      width: 540px;
+    }  
+
+    .answer {
+      width: 540px;
+    }  
+
+    .chat {
+      width: 540px;
+    }  
+
+    .panorama {
+      width: 540px;
+    }  
+
+    .photo {
       width: 540px;
     }   
 
@@ -327,7 +379,7 @@
       color: #ff0000;
       }
 
-    .my-like, .my-liked, .reblog {
+    .my-like, .my-liked, .my-reblog {
       padding: 8px 6px 8px 6px;
       margin-top: 30px;
       margin-right: 10px;
@@ -373,7 +425,7 @@
       content: "d";
     }
 
-    .reblog span:before {
+    .my-reblog span:before {
       content: "";
       display: inline-block;
       width: 24px;
@@ -385,7 +437,7 @@
       background: url(http://static.tumblr.com/lrdmbyy/HvWmtpfuy/reblog-icon.png) no-repeat;
     }
 
-    .reblog:hover span:before {
+    .my-reblog:hover span:before {
       background: url(http://static.tumblr.com/lrdmbyy/Tdomtpfvc/reblog-icon-hover.png)  no-repeat;
     }
 
@@ -408,7 +460,6 @@
     .meta {
       float: right;
       width: 60px;
-      margin-top: 40px;
       text-align: center;
     }
 
@@ -434,6 +485,7 @@
     .cal-date {
     font-weight: bold;
     padding-top: 10px;
+    font-size: 16px;
     }
 
     .comments-icon {
@@ -641,7 +693,7 @@
 
               <div class="my-like" data-reblog="{ReblogURL}" data-id="{PostID}" title="Like"><span>Like</span></div>
 
-              <a href="{ReblogURL}" class="reblog" title="Reblog"><span>Reblog</span></a>
+              <a href="{ReblogURL}" class="my-reblog" title="Reblog"><span>Reblog</span></a>
 
             </div>
 
@@ -651,7 +703,7 @@
         {block:Photoset}
         <div class="photoset">
           {block:Photos}
-            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+            <img src="{PhotoURL-HighRes}" alt="{PhotoAlt} class="detail""/>
             {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
             {/block:Photos}
           {block:Caption}<div class="caption">{Caption}</div>{/block:Caption}
