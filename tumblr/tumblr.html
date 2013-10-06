@@ -173,6 +173,17 @@
       color: #ff0000;
     }
 
+    h4 {
+      color: #c0c0c0;
+      font-size: 14px;
+      line-height: 20px;
+      float: left;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      width: 240px;
+      font-weight: 200;
+    }
+
     blockquote {
       margin-top: 0px;
       margin-left: 0px;
@@ -207,6 +218,25 @@
       color: #ee0000;
     }
 
+    .sidebar-pages {
+    text-decoration: none;
+    color: #C0C0C0;
+    float: left;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0px;
+    padding: 0px;
+    -webkit-font-smoothing: antialiased;
+    list-style: none;
+    width: 240px;
+
+    }
+
+    .sidebar-pages a {
+    text-decoration: none;
+    color: #C0C0C0;
+    }
+
     #search {
       float: left;
     }
@@ -237,7 +267,6 @@
     .balsamiq-logo {
       float: left;
       width: 240px;
-      margin-top: 40px;
     }
 
 
@@ -632,7 +661,7 @@
       <a href="/"><img src="http://static.tumblr.com/lrdmbyy/NHBmtjiuk/littlebighand.png" alt="{Title}" id="hand"></a>
       <h1 id="logo"><a href="/">{Title}</a></h1>
       <ul id="nav">
-        {block:HasPages}{block:Pages}<li><a href="{URL}" class="links">{Label}</a></li>{/block:Pages}{/block:HasPages}
+        <li><a href="/about" class="links">About</a></li>
         <li><a href="/archive" class="links">{lang:Archive}</a></li>
         <li><a href="{RSS}" class="links">{lang:RSS}</a></li>
         {block:AskEnabled}<li><a href="/ask" class="links">{AskLabel}</a></li>{/block:AskEnabled}
@@ -667,10 +696,22 @@
       <!--sponsored-->
       <div id="sponsors">
 
-      <!--<h3 class="balsamiq">Sponsored by</h3>-->
+      <h4>Sponsored by</h4>
       <a href="http://www.balsamiq.com/?s=lbd2012" class="balsamiq-logo"><img src="http://static.tumblr.com/lrdmbyy/YN1m02k7d/balsamiq-banner.png"></a>
 
       </div>
+
+      <div id="browse">
+
+       <h4>Browse</h4>
+
+          <ul class="sidebar-pages">
+              {block:HasPages}{block:Pages}<li><a href="{URL}">{Label}</a></li>{/block:Pages}{/block:HasPages}
+          </ul> 
+
+
+      </div>
+
 
 
     </div>
