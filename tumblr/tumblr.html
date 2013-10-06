@@ -277,11 +277,14 @@
     }
 
     .submit {
-      padding: 11px 14px 12px 14px;      
+      padding: 11px 14px 11px 14px;      
       background: #ee0000;
       color: white;
       text-decoration: none;
       border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      font-weight: 200;
     }
 
     .submit:hover {
@@ -301,6 +304,10 @@
       margin-bottom: 90px;
     }
 
+    .result {
+     margin-top: 30px;
+
+    }
 
 
 
@@ -550,27 +557,43 @@
     float: right;
     } 
 
-    .footer {
-    height: 120px;
-    background-color: #c0c0c0;
+    #footer {
+    height: 90px;
+    margin-top: 60px;
+    background-color: #f8f8f8;
     float: left;
-    display: inline;
+    width: 100%;
     }
+
+
+    
+    .newsletter { 
+    width: 960px;
+    margin: 0 auto;
+    }
+
 
     .newsletter-message { 
-    margin-top: 48px;
-    height: 48px;
-    padding-left: 10px;
-    float: center;
+    margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 80px;
     font-size: 24px;
-    font-weight: bold;
-
+    font-weight: 200;
+    display: inline-block;
+    float: left;
     }
+
+    #newsletter-signup { 
+    display: inline-block;
+    float: left;
+    }
+
 
     .newsletter-field {
       padding: 10px 10px 10px 10px;
       font-size: 18px;
-      margin-top: 43px;
+      margin-right: 2px;
+      margin-top: 24px;
       text-decoration: none;
       font-weight: 200;
       border-radius: 5px;
@@ -578,9 +601,9 @@
       border: 1px solid #C0C0C0;
       background-color: #ffffff;
       width: 190px;
-    }
+      display: inline-block;
 
-      
+    }
 
     img, video, object, embed {
       max-width: 100%;
@@ -657,11 +680,11 @@
 
       {block:SearchPage}
       <div class="result">
-        <p>{lang:Found SearchResultCount results for SearchQuery 2}</p>
-        {block:NoSearchResults}<p>{lang:No results for SearchQuery 2}</p>{/block:NoSearchResults}
+        <h3>{lang:Found SearchResultCount results for SearchQuery 2}</h3>
+        {block:NoSearchResults}<h3>{lang:No results for SearchQuery 2}</h3>{/block:NoSearchResults}
       </div>
       {/block:SearchPage}
-      {block:TagPage}<div class="result"><p>{lang:TagResultCount posts tagged Tag 3}</p></div>{/block:TagPage}
+      {block:TagPage}<div class="result"><h3>{lang:TagResultCount posts tagged Tag 3}</h3></div>{/block:TagPage}
 
       {block:Posts}
       <article class="post {TagsAsClasses}">
@@ -857,16 +880,24 @@
   </div>
 
 
-  <div class="container footer">
 
-    <p class="newsletter-message">Looking for more? Sign up for our weekly newsletter!</p>
 
-    <form id="search" action="/search" method="get">
-        <input type="input" class="newsletter-field" placeholder="Your Email" name="q" value="{SearchQuery}">
-        <input type="submit" value="Submit">
-    </form>
+    <div id="footer" class="clearfix">
+        
+        <div class="newsletter">
 
-  </div>
+          <p class="newsletter-message">Looking for more? Grab our weekly newsletter!</p>
+
+          <form id="newsletter-signup" action="/search" method="get">
+              <input type="input" class="newsletter-field" placeholder="Your Email" name="q" value="{SearchQuery}">
+              <input type="submit" class="submit" value="Subscribe">
+          </form>
+
+        </div>
+
+    </div>
+
+
 
            <!--like button-->
           <script>
