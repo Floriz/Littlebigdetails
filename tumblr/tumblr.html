@@ -249,7 +249,6 @@
       text-decoration: none;
       font-weight: 200;
       border-radius: 5px;
-      color: #C0C0C0;
       border: 1px solid #C0C0C0;
       background-color: #ffffff;
       width: 190px;
@@ -315,6 +314,7 @@
       border: none;
       font-size: 18px;
       font-weight: 200;
+      outline: none;
     }
 
     .submit:hover {
@@ -588,10 +588,10 @@
 
     #footer {
     min-height: 90px;
-    margin-top: 60px;
-    background-color: #f8f8f8;
     float: left;
     width: 100%;
+    margin-top: 60px;
+    background-color: #f8f8f8;
     }
 
 
@@ -599,8 +599,8 @@
     .newsletter { 
     width: 960px;
     margin: 0 auto;
+    position: relative;
     }
-
 
     .newsletter-message { 
     margin-top: 30px;
@@ -635,10 +635,44 @@
       background-color: #ffffff;
       width: 190px;
       display: inline-block;
+    }
 
+    input[type=text],
+    input[type=email] {
+      -webkit-transition: border 200ms;
+      -moz-transition: border 200ms;
+      transition: border 200ms;
+    }
+
+    input[type=text]:focus,
+    input[type=email]:focus {
+      color: #000;
+      border-color: #000;
+      outline: none;
     }
 
 
+    #mce-error-response {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      top: -40px;
+      color: #ee0000;
+    }
+
+    #mce-error-response a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    #mce-success-response {
+      position: absolute;
+      width: inherit;
+      padding: 20px 140px;
+      text-align: center;
+      background: #f8f8f8;
+      line-height: 1.5em;
+    }
 
     #mc_embed_signup form {display:block; position:relative; text-align:left; padding:10px 0 10px 3%}
     #mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
@@ -982,22 +1016,22 @@
 
 <!-- Begin MailChimp Signup Form -->
     <div id="footer" class="clearfix">
+
+        
         
         <div class="newsletter">
 
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+
           <p class="newsletter-message">Looking for more? Grab our weekly newsletter!</p>
 
-    
               <form action="http://littlebigdetails.us2.list-manage.com/subscribe/post?u=14d2a44f84d398267c8182ae2&amp;id=6faa9bfba7" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                 
                 <input type="email" placeholder="Your Email" value="" name="EMAIL" class="newsletter-field" id="mce-EMAIL">
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="submit">
-              
-
-                <div id="mce-responses" class="clear">
-                  <div class="response" id="mce-error-response" style="display:none"></div>
-                  <div class="response" id="mce-success-response" style="display:none"></div>
-                </div>  
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="submit">  
 
 
               </form>
