@@ -22,6 +22,21 @@ input {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  outline: none;
+}
+
+input[type=text],
+input[type=email] {
+  -webkit-transition: border 200ms;
+  -moz-transition: border 200ms;
+  transition: border 200ms;
+}
+
+input[type=text]:focus,
+input[type=email]:focus {
+  color: #000;
+  border-color: #000;
+  outline: none;
 }
 
 input[type=submit] {
