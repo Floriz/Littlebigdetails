@@ -109,3 +109,40 @@ text
     }
 */
 
+    background-color: #efefef;
+    display: block;
+    clear: both;
+    <div class="container">
+
+
+      <p class="newsletter-message">Looking for more? Sign up for our weekly newsletter!</p>
+
+      <form id="newsletter" action="/search" method="get">
+          <input type="input" class="newsletter-field" placeholder="Your Email" name="q" value="{SearchQuery}">
+          <input type="submit" value="Submit">
+      </form>
+
+
+   width: 100%;
+    clear: both;
+    margin: 0 auto;
+    display: block;
+
+        <div class="newsletter">
+
+      <p class="newsletter-message">Looking for more? Sign up for our weekly newsletter!</p>
+
+      <form id="newsletter-signup" action="/search" method="get">
+          <input type="input" class="newsletter-field" placeholder="Your Email" name="q" value="{SearchQuery}">
+          <input type="submit" value="Subscribe">
+      </form>
+
+    </div>
+
+    
+    .newsletter { 
+    width: 960px;
+    }
+        <div class="newsletter">
+
+
