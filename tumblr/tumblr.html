@@ -487,6 +487,15 @@
       background: url(http://static.tumblr.com/lrdmbyy/BuXmtpd84/like-icon-hover.png)  no-repeat;
     }
 
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      .my-liked span:before,
+      .my-liked:hover span:before,
+      .my-like:hover span:before {
+        background-image: url(http://static.tumblr.com/exomipi/UcUmugwr9/like-icon-hover_2x.png);
+        background-size: 24px;
+      }
+    }
+
     .my-liked span:after {
       content: "d";
     }
@@ -504,8 +513,22 @@
       background: url(http://static.tumblr.com/lrdmbyy/HvWmtpfuy/reblog-icon.png) no-repeat;
     }
 
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      .my-reblog span:before {
+        background-image: url(http://static.tumblr.com/54tapni/QW3mugvo5/reblog-icon_2x.png);
+        background-size: 24px;
+      }
+    }
+
     .my-reblog:hover span:before {
       background: url(http://static.tumblr.com/lrdmbyy/Tdomtpfvc/reblog-icon-hover.png)  no-repeat;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      .my-reblog:hover span:before {
+        background-image: url(http://static.tumblr.com/exomipi/l9Kmugwro/reblog-icon-hover_2x.png);
+        background-size: 24px;
+      }
     }
 
     .tags {
@@ -542,6 +565,13 @@
     width: 36px;
     margin-left: 12px;
     display: block;
+    }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      .date-icon {
+        background-image: url(http://static.tumblr.com/54tapni/n1smugvn5/date_2x.png);
+        background-size: 36px;
+      }
     }
 
     .date {
@@ -583,6 +613,15 @@
     display: block;
 
     }
+
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+      .comments-icon {
+        background-image: url(http://static.tumblr.com/54tapni/DgXmugvnt/like-icon_2x.png);
+        background-size: 36px;
+      }
+    }
+
+
 
     .likes {
     margin-top: 6px;
