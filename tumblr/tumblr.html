@@ -206,6 +206,12 @@
       text-decoration: none;
 
     }
+      
+     ol {
+      list-style: none;
+      padding: 0px;
+      float: left;
+      } 
 
     #nav {
       font-size: 18px;
@@ -347,9 +353,87 @@
       margin-bottom: 90px;
     }
 
+
+
+    #disqus_thread {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    width: 540px;
+    float: left;
+    }
+
+    #disqus_thread a {
+     color: #ee0000;
+
+    }
+
+    #disqus_thread a {
+     color: #ff0000;
+
+    }
+
+
+    #notes {
+    margin-bottom: 60px;
+    width: 540px;
+    font-size: 14px;
+    text-decoration: none;     
+    text-align: left;
+    float: left;
+    display: block;
+    color: #010101;
+
+    }
+
+     #notes a {
+      color: #ee0000;
+      text-decoration: none;
+    }
+
+      #notes a:hover {
+      color: #ff0000;
+      text-decoration: none;
+
+      }
+
+    #notes li.note blockquote {
+      margin-top: 5px;
+      margin-left: 26px;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: 200;
+      color: #c0c0c0;
+      width: 500px;
+    }
+
+    #notes li.note blockquote a {
+      color: #c0c0c0;
+    }
+
+    #notes li.note blockquote a:hover {
+      color: #ee0000;
+    }
+
+    #notes img {
+    vertical-align: middle;
+    margin-top: 5px;
+    }
+
+    #notes .action {
+    margin-left: 5px;
+   }
+
+   .more_notes_link_container {
+    text-align: left;
+    margin-top: 20px;
+    font-weight: bold;
+
+   }
+
     .result {
      margin-top: 30px;
     }
+
 
 
 
@@ -1088,7 +1172,39 @@
         {block:NextPage}<a class="next" href="{NextPage}">{lang:Next}</a>{/block:NextPage}
       </div>
       {/block:Pagination}
+
+           <script type="text/javascript">var disqus_url = "{Permalink}"; var disqus_title ="{block:PostTitle}{PostTitle}{/block:PostTitle}";</script>{block:Permalink}<div id="disqus_thread"></div>
+          <script type="text/javascript">
+            (function() {
+             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+             dsq.src = 'http://littlebigdetails.disqus.com/embed.js';
+             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript=littlebigdetails">comments powered by Disqus.</a></noscript>
+          {/block:Permalink}<script type="text/javascript">
+          var disqus_shortname = 'littlebigdetails';
+          (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.src = 'http://disqus.com/forums/littlebigdetails/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+          }());
+          </script>
+
+      {block:PostNotes}
+        <div id="notes">{PostNotes}</div>
+        {/block:PostNotes}
+
+
     </section><!--close content-->
+  
+
+               <!--discus JS-->    
+
+
+
+
+
   </div>
 
 
@@ -1338,6 +1454,8 @@
           }, false );
           };
           </script>
+
+
 
            <!--discus comment counter-->    
 
