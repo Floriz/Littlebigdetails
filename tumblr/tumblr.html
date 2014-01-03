@@ -10,6 +10,45 @@
   <link rel="apple-touch-icon" href="{PortraitURL-128}">
   <link rel="shortcut icon" href="{Favicon}">
   <link rel="alternate" type="application/rss+xml" href="{RSS}">
+  <meta property="og:site_name" content="{Title}"/>
+
+
+{block:PermalinkPage}
+
+  <meta name="twitter:url" content="{Permalink}"/>
+  <meta name="twitter:site" content="@littlebigdetail">
+  <meta name="twitter:creator" content="@floriz">
+
+  <meta property="og:url" content="{Permalink}"/>
+  <meta property="og:type" content="article"/>
+
+        {block:Posts}
+
+            {block:Photo}
+
+                <meta property="og:image" content="{PhotoURL-500}"/>
+                {block:Caption}<meta property="og:description" content="{PlaintextCaption}"/>{/block:Caption}
+                <meta name="twitter:card" content="summary_large_image">
+
+            {/block:Photo}
+
+        {/block:Posts}
+
+{/block:PermalinkPage}
+
+
+{block:IndexPage}
+
+        <meta property="og:title" content="{Title}"/>
+        <meta property="og:type" content="blog"/>
+        <meta property="og:description" content="{MetaDescription}"/>
+        <meta property="og:image" content="{PortraitURL-64}"/>
+
+{/block:IndexPage}
+
+
+
+
 
   <!--Normalize 2.1.0 CSS-->
   <link rel="stylesheet" href="http://static.tumblr.com/cqczc5x/kYdmihjuj/normalize.css" type="text/css" media="all">
@@ -940,7 +979,7 @@
 
       <!--tumblr-->
       <!-- <div id="followerscounter-container"></div><script type="text/javascript" src="http://fccdn.followerscounter.com/widget/littlebigdetails/text"></script>-->
-      <iframe class="btn" frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="240" src="http://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=undefined&color_scheme=light"></iframe>
+      <iframe class="btn" frameborder="0" border="0" scrolling="no" allowtransparency="true" height="25" width="240" src="http://platform.tumblr.com/v1/follow_button.html?button_type=2&tumblelog=littlebigdetails&color_scheme=light"></iframe>
 
       <!--twitter-->
       <a href="https://twitter.com/littlebigdetail" class="twitter-follow-button" data-show-count="true" data-show-screen-name="false">Follow @littlebigdetail</a>
