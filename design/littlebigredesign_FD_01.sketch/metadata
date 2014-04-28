@@ -5,9 +5,61 @@
 	<key>app</key>
 	<string>com.bohemiancoding.sketch</string>
 	<key>build</key>
-	<integer>5302</integer>
+	<integer>5370</integer>
 	<key>commit</key>
-	<string>9460a4bc62af5e9ba50dd4143578fd9401710ce5</string>
+	<string>38aeabf36c76d40a8ed2d256f8f3b9492c3dac07</string>
+	<key>fonts</key>
+	<array>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>HelveticaNeue-Bold</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>HelveticaNeue-Bold</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Light</string>
+		<string>HelveticaNeue-Bold</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>HelveticaNeue-Bold</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+		<string>Helvetica-Light</string>
+	</array>
+	<key>length</key>
+	<integer>713203</integer>
 	<key>version</key>
 	<integer>18</integer>
 </dict>

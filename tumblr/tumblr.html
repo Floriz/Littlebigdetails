@@ -392,6 +392,10 @@
       outline: none;
     }
 
+    input.submit {
+      padding: 11px 14px 11px 14px;
+    }
+
     .submit:hover {
       background: #ff0000;
     }
@@ -949,6 +953,69 @@
     .search_query {}
     .read_more_container a {}
 
+    #inlink-list {
+      padding-left: 0px;
+    }
+
+    #tumblrinlink { 
+      padding: 30px 0 0 0;
+      }               /* Main div Container */
+
+    #inlink-title {
+      width: 540px;
+      float: left;
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+          
+    #tumblrinlink h2 {
+      color: #010101;
+      font-size: 24px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding-bottom: 0px;
+      font-weight: 200;
+      }    /* Title */
+    #tumblrinlink a {
+      color: #010101;
+      font-size: 14px;
+      line-height: 20px;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      padding-bottom: 0px;
+      font-weight: 200;
+     }             /* Link Style */                        
+    li.inlink-item { 
+      list-style: none;
+      float: left;
+      border: none;
+      width: 200px;
+      padding: 0px;
+      margin-right: 80px;
+      }              /* List Item (each content is rendered as li) */
+    li.inlink-item img {
+      margin: 0px; 
+      border: 15px solid #f8f8f8;
+      max-width: 200px;
+      max-height: 300px;
+      }
+    li.inlink-item p { }    /* The actual title for the link */
+    #inlink-list { }                /* The ul container */
+    /* Each li has its own selector for individual styling depending
+    * on post type. */
+    li.inlink-item#regular { }
+    li.inlink-item#link { }
+    li.inlink-item#quote { }
+    li.inlink-item#conversation { }
+    li.inlink-item#video { }
+    li.inlink-item#audio { }
+    li.inlink-item#answer { }
+
+    span.notes {
+      display: none !important;
+    } /*New in version 2*/
+
+    #inlink-logo {
+    display: none;
+    } 
 
   </style>
   
@@ -1101,6 +1168,8 @@
 
             <a href="{Permalink}" class="notes">{NoteCount}</a>
 
+
+
             </div>
 
 
@@ -1227,6 +1296,13 @@
         {/block:Answer}
 
       {block:HasTags}<div class="tags"># {block:Tags}<a href="{TagURL}">{Tag} </a>{/block:Tags}</div>{/block:HasTags}
+
+      {block:Permalink}
+        {block:HasTags}
+                <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+                <script src="http://tumblr-in-link.googlecode.com/svn/branches/Version 2.0/js/tumblr-in-link.2.0.js?num=2&len=100&css=option&size=250&title=Related Posts&tags={block:Tags}{Tag},{/block:Tags}" type="text/javascript"></script>
+        {/block:HasTags} 
+      {/block:Permalink}
 
 
       </article>
